@@ -1,0 +1,399 @@
+/* GENERAL STYLE */
+body{
+  cursor: url(../img/dildo.svg), pointer;
+}
+.wrapper {
+  background: url(../img/main-bg.webp) no-repeat center;
+  background-size: cover;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  
+  @include tablet{
+    background: url(../img/bg-768.webp) no-repeat center; 
+    background-size: cover;   
+  }
+}
+.l-wrapper {    
+  position: relative;  
+  width: 81%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:flex-end;
+  overflow: hidden;  
+  z-index: 2;
+  @include tablet{
+    width: 90%;
+  }
+  @include phone-mini{
+    width: 100%;
+  }
+}
+video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;    
+  transform: translateX(-50%) translateY(-50%);
+
+  transition: 1s opacity;
+}
+.none{
+display:none;
+}
+
+.show{
+animation-name: fade;  
+transition-duration: 0.5s;
+transition-timing-function: ease;
+transition-delay: 0.5s;
+}
+@keyframes fade {
+  0% {      
+    opacity: 0;      
+  }
+100%{
+  opacity:1;    
+}
+}
+/* GENERAL STYLE END*/
+
+/* HEADER STYLE */
+.header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 80px;
+    @include phone-mini{
+      flex-direction: column;
+      padding-top: 40px;
+    }
+}
+.header__logo{
+  @include phone-mini{
+    padding-bottom: 10px;
+  }
+}
+.header__text{
+  color: #f4c2c2;
+  font-family: robotobold, sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-left: 85px;
+
+  &_desct{
+    @include laptop{
+      display: none;      
+    }
+  }
+  &_mob{
+    display: none;
+    @include laptop{
+      display: block;
+    font-size: 32px;
+    text-align: center;
+    margin-left: 0;
+    padding-top: 46px;     
+    }
+  }
+}
+.header__menu{
+  display: flex;
+  width: 264px;
+}
+.nav{
+    display: flex;
+    width: 100%;
+}
+.nav__list{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    @include tablet{
+      justify-content: space-evenly;
+      
+    }
+}
+.nav__item{
+  &_deskt{
+    @include tablet{
+      display: none;      
+    }
+  }
+  &_mobile{
+    display: none;
+
+    @include tablet{
+      display: flex;
+      width: 50px;
+      height: 50px;
+      padding: 2px 7px 2px 2px;      
+      background: #b0394e;
+      align-items: center;
+      text-align: center;
+      border-radius: 8px;
+      
+      .nav__link{
+        font-size: 24px;
+        padding-left: 7px;
+      }
+    }
+  }
+  &_login-mob{
+    display: none;
+
+    @include tablet{
+      display: block;
+      background: url(../img/key.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 50px;
+      height: 50px;
+      background-color: #b0394e;
+      border-radius: 8px;
+    }
+  }
+  &_login-desktop {
+    display: block;
+    @include tablet{
+      display: flex;
+    align-items: center;
+    background: #b0394e;
+    padding: 0 13px;
+    border-radius: 8px;
+    }
+  }
+  &_sub{
+    background: url(../img/gb.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    @include tablet{
+      display: none;      
+    }
+  }
+  &_sub:after {
+    content: "";
+    background: url(../img/chevron-down.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin-left: 22px;
+    margin-top: -14px;  
+    width: 10px;
+    height: 6px;  
+  }
+  &_sub:hover{
+    .submenu{
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }  
+}
+.nav__link{
+  color: #fff;
+  font-size: 18px;
+  opacity: 0.8;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover{
+    opacity: 1;
+  }  
+}
+.submenu {
+  background: #273037;
+	position: relative;
+	left: 0;
+	top: 100%;
+	z-index: 5;
+	width: 100%;
+  opacity: 0;
+	transform: scaleY(0);
+	transform-origin :0 0;
+  transition: .5s ease-in-out;  
+  @include laptop{
+    right: 182px;
+    top: 12px;
+    left: auto;
+  }     
+}
+.submenu__item{
+  display: block;
+}
+.submenu__link{
+  background: url(../img/ru.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    cursor: pointer;
+    display: block;    
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+  &:hover{
+    text-decoration: none;
+  }
+  &:focus{
+    color:#7aa2ef;
+  }
+  &:last-child{
+    border: none;
+  }
+}
+/* HEADER STYLE END*/
+
+/* MAIN CONTENT STYLE */
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 57px;
+    width: 100%;
+    justify-content: space-between;
+}
+.content-block{
+  width: 249px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  @include laptop{
+   width: 50%;
+   padding-bottom: 20px;
+  }
+  @include tablet{
+    padding-bottom: 30px;
+  }
+  @include phone{
+    width: 100%;
+  }
+  &:after{
+    content: "";
+    display: block;
+    height: 156px;
+    width: 5px;
+    position: absolute;
+    right: -57px;
+    top: 50px;
+    background: rgba(256, 256, 256, 0.8);
+    @include laptop{
+      display: none;
+    }
+  }
+  &:last-child:after{
+    display: none;
+  }
+}
+
+.content:hover > div{
+  opacity: 0.5;
+}
+.content:hover > div:hover{
+  opacity: 1;
+}
+.content-block__image{
+  width: 100%;
+  height: 236px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.content-block__header{
+  font-size: 58px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: robotobold, sans-serif;
+  padding-top: 15px;
+}
+.content-block__cost{
+  font-size: 48px;
+  font-weight: 600;
+}
+.content-block__arrow{
+    background: url(../img/chevron-down.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    width: 10px;
+    height: 6px; 
+}
+.content-block__button{
+  width: 247px;  
+  border-radius: 4px;     
+}
+.button{
+  width: 100%;
+    background: #f12346;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 2.25rem;
+    outline: none;
+    padding: 10px 0;
+    border-radius: 8px; 
+}
+
+/* MAIN CONTENT STYLE END*/
+
+/* FOOTER STYLE */
+.footer{
+  display: flex;
+  width: 100%;
+  padding-top: 50px;
+  @include laptop{
+    padding-top: 180px;
+  }
+  @include tablet {
+    background: rgba(166, 58, 77, 0.6);
+    padding-top: 50px;
+  }
+}
+.footer__block{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.privilege{
+    display: flex;
+    align-items: center;
+    @include laptop{      
+      padding-bottom: 30px;
+    }
+    @include tablet {
+      width: 30%;
+      justify-content: flex-start;
+      padding-bottom: 10px;
+    }
+    @include phone{
+      width: 50%;
+    }
+    @include phone-mini{
+      width: 100%;
+    padding-left: 100px;
+    }
+}
+.privilege__picture{
+  width: 24px;
+  height: 24px;  
+  margin-right: 10px;
+}
+.privilege__text{
+  color: #fff;
+  font-family: 'robotothin';
+}
+.privilege__paragraph{
+  font-size: 24px;
+}
+/* FOOTER STYLE END*/

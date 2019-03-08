@@ -1,0 +1,219 @@
+extends ../layouts/_default
+
+block section-header 
+    //videos
+    video#video.none(playsinline='', autoplay='', muted='', loop='')        
+        source(src='./assets/img/video/anni_00.mp4', type='video/mp4')
+    video#video2.none(playsinline='', autoplay='', muted='', loop='')
+        source(src='./assets/img/video/00-2.mp4', type='video/webm')
+
+    video#video3.none(playsinline='', autoplay='', muted='', loop='')        
+        source(src='./assets/img/video/anni_70.mp4', type='video/mp4')
+    video#video4.none(playsinline='', autoplay='', muted='', loop='')
+        source(src='./assets/img/video/70-2.mp4', type='video/webm') 
+
+    video#video5.none(playsinline='', autoplay='', muted='', loop='')        
+        source(src='./assets/img/video/anni_80.mp4', type='video/mp4')
+    video#video6.none(playsinline='', autoplay='', muted='', loop='')
+        source(src='./assets/img/video/80-2.mp4', type='video/webm') 
+
+    video#video7.none(playsinline='', autoplay='', muted='', loop='')        
+        source(src='./assets/img/video/anni_90.mp4', type='video/mp4')
+    video#video8.none(playsinline='', autoplay='', muted='', loop='')
+        source(src='./assets/img/video/90-2.mp4', type='video/webm')                 
+    .l-wrapper
+        //menu
+        header.header
+            .header__logo
+                img.header__img(src="./assets/img/logo.png", alt="")
+            .header__title 
+                h1.header__text.header__text_desct Choose your pleasure plan
+            .header__menu
+                nav.nav
+                    ul.nav__list
+                        li.nav__item.nav__item_sub
+                            a.nav__link(href="")
+                                ul.submenu
+                                    li.submenu__item
+                                        a.submenu__link(href="")
+                        li.nav__item.nav__item_mobile
+                            a.nav__link(href="") En                                  
+                        li.nav__item.nav__item_deskt      
+                            a.nav__link(href="") Login 
+                        li.nav__item.nav__item_login-mob      
+                            a.nav__link(href="")  
+                        li.nav__item_login-desktop      
+                            a.nav__link(href="") Join now
+block section-main
+    .l-wrapper
+        //section-main
+        h1.header__text.header__text_mob Choose your pleasure plan
+        .content
+            .content-block#one
+                .content-block__image
+                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='249px', height='236px')
+                        path(fill-rule='evenodd', fill='rgb(255, 255, 255)', d='M150.841,189.254 L150.841,206.954 L246.542,206.954 L246.542,235.154 L121.741,235.154 L121.741,189.554 C121.741,91.453 219.542,116.353 219.542,60.853 C219.542,38.052 208.741,26.952 184.441,26.952 C162.241,26.952 149.941,38.952 149.941,65.653 L121.441,65.653 C121.441,20.652 146.941,0.852 185.641,0.852 C224.042,0.852 248.342,19.452 248.342,60.553 C248.342,144.253 150.841,107.353 150.841,189.254 ZM0.241,210.854 L37.741,210.854 L37.741,29.052 L8.341,29.052 L8.341,3.552 L66.242,3.552 L66.242,210.854 L101.942,210.854 L101.942,235.154 L0.241,235.154 L0.241,210.854 Z')                 
+                .content-block__title   
+                    h1.content-block__header Months
+                .content-block__price
+                    p.content-block__cost 12/99 mo
+                .content-block__arrow#arrow 
+                .content-block__button.none#buttonOne
+                    button.button(type="submit") Join Now
+            .content-block#two
+                .content-block__image
+                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='131px', height='236px')
+                        path(fill-rule='evenodd', fill='rgb(255, 255, 255)', d='M0.041,168.754 C0.041,213.454 16.841,235.354 63.042,235.354 C107.742,235.354 130.542,208.654 130.542,165.454 C130.542,133.353 119.442,118.353 96.342,109.353 C119.442,99.753 127.242,76.653 127.242,58.953 C127.242,19.052 100.242,0.152 65.442,0.152 C24.041,0.752 2.741,22.352 2.741,64.053 L29.741,64.053 C29.741,34.652 44.742,25.352 65.142,25.352 C87.942,25.352 99.642,37.652 99.642,58.653 C99.642,80.553 77.142,96.153 60.342,96.753 L43.842,96.753 L43.842,121.953 L60.342,121.953 C82.242,121.953 100.542,132.453 100.542,165.754 C100.542,196.654 87.342,207.454 62.742,207.454 C37.542,207.454 27.941,196.054 27.941,168.754 L0.041,168.754 Z')
+                .content-block__title   
+                    h1.content-block__header Months
+                .content-block__price
+                    p.content-block__cost 29/99 mo
+                .content-block__arrow#arrowTwo  
+                .content-block__button.none#buttonTwo
+                    button.button(type="submit")  Join Now      
+            .content-block#three
+                .content-block__image
+                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='102px', height='233px')
+                        path(fill-rule='evenodd', fill='rgb(255, 255, 255)', d='M0.241,232.154 L101.942,232.154 L101.942,207.854 L66.242,207.854 L66.242,0.552 L8.341,0.552 L8.341,26.052 L37.741,26.052 L37.741,207.854 L0.241,207.854 L0.241,232.154 Z')
+                .content-block__title   
+                    h1.content-block__header Month
+                .content-block__price
+                    p.content-block__cost 39/99 mo
+                .content-block__arrow#arrowThree 
+                .content-block__button.none#buttonThree
+                    button.button(type="submit")  Join Now
+            .content-block#four
+                .content-block__image
+                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='131px', height='236px')
+                        path(fill-rule='evenodd', fill='rgb(255, 255, 255)', d='M0.041,168.754 C0.041,213.454 16.841,235.354 63.042,235.354 C107.742,235.354 130.542,208.654 130.542,165.454 C130.542,133.353 119.442,118.353 96.342,109.353 C119.442,99.753 127.242,76.653 127.242,58.953 C127.242,19.052 100.242,0.152 65.442,0.152 C24.041,0.752 2.741,22.352 2.741,64.053 L29.741,64.053 C29.741,34.652 44.742,25.352 65.142,25.352 C87.942,25.352 99.642,37.652 99.642,58.653 C99.642,80.553 77.142,96.153 60.342,96.753 L43.842,96.753 L43.842,121.953 L60.342,121.953 C82.242,121.953 100.542,132.453 100.542,165.754 C100.542,196.654 87.342,207.454 62.742,207.454 C37.542,207.454 27.941,196.054 27.941,168.754 L0.041,168.754 Z')
+                .content-block__title   
+                    h1.content-block__header Day
+                .content-block__price
+                    p.content-block__cost 1 Dollar
+                .content-block__arrow#arrowFour     
+                .content-block__button.none#buttonFour
+                    button.button(type="submit")  Join Now
+block section-footer
+    //footer
+    footer.footer
+        .l-wrapper
+            .footer__block
+                .privilege
+                    .privilege__picture
+                        svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='24px', height='24px', viewBox='0 0 24 24', enable-background='new 0 0 24 24', xml:space='preserve')
+                            g#Outline_Icons
+                                g
+                                    path(fill='none', stroke='#fff', stroke-linejoin='round', stroke-miterlimit='10', d='M21.5,11.001\
+                                    c-4.951,2.52-8.355,6.659-9.5,8.246c1.091,1.747,3.109,2.911,5.32,2.911c3.412,0,6.18-2.766,6.18-6.178\
+                                    C23.5,14.092,22.834,12.134,21.5,11.001z')
+                                    path(fill='none', stroke='#fff', stroke-linejoin='round', stroke-miterlimit='10', d='M2.5,11.001\
+                                    c4.949,2.52,8.357,6.659,9.5,8.246c-1.091,1.747-3.108,2.911-5.321,2.911c-3.411,0-6.179-2.766-6.179-6.178\
+                                    C0.5,14.092,1.164,12.134,2.5,11.001z')
+                                    line(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', x1='2.5', y1='11.001', x2='2.5', y2='4.001')
+                                    line(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', x1='21.5', y1='11.001', x2='21.5', y2='4.001')
+                            g#invisible_shape
+                                rect(fill='none', width='24', height='24')
+                    .privilege__text
+                        p.privilege__paragraph 701 Models
+                .privilege
+                    .privilege__picture
+                        svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='24px', height='24px', viewBox='0 0 24 24', enable-background='new 0 0 24 24', xml:space='preserve')
+                            g#Outline_Icons_1_
+                                g#Outline_Icons
+                                    g
+                                        polygon(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
+                                        14.5,16.5 5.5,16.5 5.5,7.5 14.5,7.5 14.5,11 18.5,8.5 18.5,15.5 14.5,13 			')
+                                        circle(fill='none', stroke='#fff', stroke-linejoin='round', stroke-miterlimit='10', cx='12', cy='12', r='11.5')
+                                g#New_icons_1_
+                            g#Invisible_Shape
+                                rect(fill='none', width='24', height='24')
+                        
+                    .privilege__text
+                        p.privilege__paragraph 2500+ Videos
+                .privilege
+                    .privilege__picture
+                        svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='24px', height='24px', viewBox='0 0 24 24', enable-background='new 0 0 24 24', xml:space='preserve')
+                            g#Outline_Icons
+                                g
+                                    path(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', d='M23.5,18.5\
+                                    c0,0.549-0.45,1-1,1h-21c-0.55,0-1-0.451-1-1v-12c0-0.55,0.45-1,1-1h21c0.55,0,1,0.45,1,1V18.5z')
+                                    path(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', d='M3,5.5v-1\
+                                    c0-0.55,0.45-1,1-1h2c0.55,0,1,0.45,1,1v1')
+                                    line(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', x1='0.5', y1='10.5', x2='8', y2='10.5')
+                                    line(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', x1='0.5', y1='12.5', x2='8', y2='12.5')
+                                    line(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', x1='0.5', y1='14.5', x2='8', y2='14.5')
+                                    circle(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', cx='16.5', cy='12.5', r='5')
+                                    rect(x='14.5', y='10.5', fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', width='4', height='4')
+                            g#Invisible_Shape
+                                rect(fill='none', width='24', height='24')
+                    .privilege__text
+                        p.privilege__paragraph 59925 Pictures                
+            
+                .privilege
+                    .privilege__picture
+                        svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='24px', height='24px', viewBox='0 0 24 24', enable-background='new 0 0 24 24', xml:space='preserve')
+                            g#Outline_Icons
+                                g
+                                    g
+                                        polyline(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
+                                        8.572,7.056 7.747,12.242 6.921,9.65 6.095,12.242 5.269,7.056 			')
+                                        polyline(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
+                                        13.651,7.056 12.827,12.242 12.001,9.65 11.175,12.242 10.349,7.056 			')
+                                        polyline(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
+                                        18.731,7.056 17.906,12.242 17.08,9.65 16.254,12.242 15.428,7.056 			')
+                                    g
+                                        g
+                                            path(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', d='M23.5,18.911\
+                                            c0,0.878-0.671,1.589-1.5,1.589H2c-0.828,0-1.5-0.711-1.5-1.589V4.089C0.5,3.211,1.172,2.5,2,2.5h20\
+                                            c0.829,0,1.5,0.711,1.5,1.589V18.911z')
+                                            line(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', x1='5', y1='22.5', x2='19', y2='22.5')
+                                            line(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', x1='11.5', y1='20.5', x2='11.5', y2='22.5')
+                                            circle(fill='none', stroke='#fff', stroke-linejoin='round', stroke-miterlimit='10', cx='12', cy='18.5', r='0.5')
+                                            line(fill='none', stroke='#fff', stroke-linejoin='round', stroke-miterlimit='10', x1='0.5', y1='16.5', x2='23.5', y2='16.5')
+                            g#Invisible_Shape
+                                rect(fill='none', width='24', height='24')
+                    .privilege__text
+                        p.privilege__paragraph 16 Niche Sites
+                .privilege
+                    .privilege__picture
+                        svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='24px', height='24px', viewBox='0 0 24 24', enable-background='new 0 0 24 24', xml:space='preserve')
+                            g#Outline_Icons
+                                g
+                                    g
+                                        polyline(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
+                                        18.5,6.5 18.5,4.5 7.5,4.5 5.5,2.5 0.5,2.5 0.5,16.5 			')
+                                    g
+                                        polyline(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
+                                        20.5,8.5 20.5,6.5 2.5,6.5 2.5,18.5 			')
+                                    g
+                                        rect(x='4.5', y='8.5', fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', width='18', height='12')
+                                    path(fill='none', stroke='#fff', stroke-linejoin='round', stroke-miterlimit='10', d='M10.5,18.5v-8l6.769,4L10.5,18.5z')
+                            g#Invisible_Shape
+                                rect(fill='none', width='24', height='24')
+                    .privilege__text
+                        p.privilege__paragraph 416 Tb Archive
+                .privilege
+                    .privilege__picture
+                        svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='24px', height='24px', viewBox='0 0 24 24', enable-background='new 0 0 24 24', xml:space='preserve')
+                            g#Outline_Icons_1_
+                                g#Outline_Icons
+                                    g
+                                        path(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', d='M2.5,14.5\
+                                        c-1.104,0-2-0.896-2-2s0.896-2,2-2')
+                                        path(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', d='M14.5,21.5h2\
+                                        c1.934,0,3.5-1.066,3.5-3v-1.064')
+                                        circle(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', cx='13', cy='21.5', r='1.5')
+                                        path(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', d='M6.5,17.5h-2\
+                                        c-1.104,0-2-0.896-2-2v-6c0-1.104,0.896-2,2-2h2V17.5z')
+                                        path(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', d='M21.5,14.5\
+                                        c1.104,0,2-0.896,2-2s-0.896-2-2-2')
+                                        path(fill='none', stroke='#fff', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', d='M17.5,17.5h2\
+                                        c1.104,0,2-0.896,2-2v-6c0-1.104-0.896-2-2-2h-2V17.5z')
+                                        path(fill='none', stroke='#fff', stroke-linejoin='round', stroke-miterlimit='10', d='M5,7.5c0-3.866,3.134-7,7-7\
+                                        c3.865,0,7,3.134,7,7')
+                                g#New_icons_1_
+                            g#Invisible_Shape
+                                rect(fill='none', width='24', height='24')
+                    .privilege__text
+                        p.privilege__paragraph 24/7 Support
+    

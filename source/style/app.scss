@@ -1,0 +1,14 @@
+// DIMENSIONS
+$font-size:16px;
+
+// template
+@import "./template/mixins";
+@import "./template/adjustment";
+
+// fonts
+@import './common/fonts';
+
+// pages
+@import 'pages/index';
+
+
